@@ -409,7 +409,7 @@ class PKPContainer extends Container
             'driver' => 'database',
             'table' => 'jobs',
             'queue' => 'default',
-            'retry_after' => 240,
+            'retry_after' => 610,
             'after_commit' => true,
         ];
         $items['queue']['failed'] = [
@@ -450,7 +450,7 @@ class PKPContainer extends Container
 
         // Cache configuration
         $items['cache'] = [
-            'default' => Config::getVar('cache', 'default', 'opcache'),
+            'default' => Config::getVar('cache', 'default', 'file'),
             'stores' => [
                 'opcache' => [
                     'driver' => 'opcache',
